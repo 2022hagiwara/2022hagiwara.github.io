@@ -2,9 +2,13 @@
 <head>
   <script>
     function isbnchange(){
-      var random = Math.floor( Math.random() * 11 );
+      var isbn6 = "";
+      var random = Math.floor( Math.random() * 10);
 
-      document.getElementById("isbn").textContent = random;
+      for(var i = 0; i < 9; i++){
+        isbn6 = isbn6 + String(Math.floor( Math.random() * 10));
+      }
+      document.getElementById("isbn").textContent = "9784" + isbn6;
     }
     
     window.onload = function(){
